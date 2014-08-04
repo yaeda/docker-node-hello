@@ -3,6 +3,10 @@ docker-node-hello
 Ubuntu version of [Dockerizing a Node.js web application - Docker Documentation](https://docs.docker.com/examples/nodejs_web_app/)
 ```
 git clone https://github.com/yaeda/docker-node-hello.git
+
+# if you need to add proxy setting
+vi Dockerfile
+
 docker build -t <your name>/ubuntu-node-hello .
 docker run -p 49160:8080 -d <your name>/ubuntu-node-hello
 ```
