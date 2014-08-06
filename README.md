@@ -54,7 +54,7 @@ $ sudo udhcpc   # refresh the DHCP
 $ sudo /etc/init.d/docker restart # restart the service
 ```
 
-`udhcpc` sometimes doesn't reflect host settings. In that case, edit `/etc/resolve.conf`.
+`udhcpc` sometimes doesn't reflect host settings. In that case, edit `/etc/resolv.conf`.
 
 
 Install docker (MacOS)
