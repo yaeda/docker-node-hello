@@ -27,14 +27,14 @@ boot2docker up
 Proxy Setting (MacOS)
 --------------------
 [proxy - Docker/Boot2Docker: Set http/https proxies for docker on osx - Stack Overflow](http://stackoverflow.com/questions/24489265/docker-boot2docker-set-http-https-proxies-for-docker-on-osx)
-```
-boot2docker ssh
+```sh
+$ boot2docker ssh
 
 # add proxy setting in the virtual machine
-sudo vi /var/lib/boot2docker/profile
-exit
+$ sudo vi /var/lib/boot2docker/profile
+$ exit
 
-boot2docker restart
+$ boot2docker restart
 ```
 
 /var/lib/boot2docker/profile
@@ -49,7 +49,7 @@ Nameserver Setting (MacOS)
 
 In current version, boot2docker runs the docker daemon before it pulls the DNS from the host.
 Threfore you need to update it manually.
-```
+```sh
 $ sudo udhcpc   # refresh the DHCP
 $ sudo /etc/init.d/docker restart # restart the service
 ```
@@ -60,9 +60,9 @@ $ sudo /etc/init.d/docker restart # restart the service
 Install docker (MacOS)
 --------------------
 
-```
-brew install boot2docker
-boot2docker init
-boot2docker start
-export DOCKER_HOST=tcp://<IP>:<PORT>
+```sh
+$ brew install boot2docker
+$ boot2docker init
+$ boot2docker start
+$ export DOCKER_HOST=tcp://<IP>:<PORT>
 ```
