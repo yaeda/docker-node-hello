@@ -1,14 +1,14 @@
 docker-node-hello
 ====================
 Ubuntu version of [Dockerizing a Node.js web application - Docker Documentation](https://docs.docker.com/examples/nodejs_web_app/)
-```
-git clone https://github.com/yaeda/docker-node-hello.git
+```sh
+$ git clone https://github.com/yaeda/docker-node-hello.git
 
 # if you need to add proxy setting
-vi Dockerfile
+$ vi Dockerfile
 
-docker build -t <your name>/ubuntu-node-hello .
-docker run -p 49160:8080 -d <your name>/ubuntu-node-hello
+$ docker build -t <your name>/ubuntu-node-hello .
+$ docker run -p 49160:8080 -d <your name>/ubuntu-node-hello
 ```
 
 and access to [localhost:49160](http://localhost:49160)
@@ -16,11 +16,11 @@ and access to [localhost:49160](http://localhost:49160)
 Port Forwarding (MacOS)
 --------------------
 [Port forwarding when using boot2docker on OSX · Issue #4007 · docker/docker](https://github.com/docker/docker/issues/4007)
-```
-boot2docker poweroff
-VBoxManage modifyvm "boot2docker-vm" --natpf1 "tcp-port49160,tcp,,49160,,49160"
-VBoxManage modifyvm "boot2docker-vm" --natpf1 "udp-port49160,udp,,49160,,49160"
-boot2docker up
+```sh
+$ boot2docker poweroff
+$ VBoxManage modifyvm "boot2docker-vm" --natpf1 "tcp-port49160,tcp,,49160,,49160"
+$ VBoxManage modifyvm "boot2docker-vm" --natpf1 "udp-port49160,udp,,49160,,49160"
+$ boot2docker up
 ```
 
 
